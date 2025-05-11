@@ -16,13 +16,11 @@ public class KoordinatniSustav extends JFrame {
         panel.setPreferredSize(new Dimension(800, 800));
         add(panel, BorderLayout.CENTER);
 
-        // Kontrolni panel
         JPanel controlPanel = new JPanel();
 
         xField = new JTextField(4);
         yField = new JTextField(4);
 
-        // Dodana opcija "15x15"
         gridSizeBox = new JComboBox<>(new String[]{
             "10x10", "15x15", "20x20", "30x30", "40x40", "50x50"
         });
@@ -48,7 +46,6 @@ public class KoordinatniSustav extends JFrame {
 
         add(controlPanel, BorderLayout.NORTH);
 
-        // Akcije
         izracunajButton.addActionListener(e -> {
             try {
                 int x = Integer.parseInt(xField.getText());
